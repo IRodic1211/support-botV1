@@ -67,7 +67,10 @@ client.on('message', function (message) {
                     "name": "!partnership",
                     "value": "I'm interested in creating content for you guys, where do I go?"
                 }
-            ]
+            ],
+            "footer":{
+                "text": "For any constructive feedback please add me on discord Roda#2250 or DM Roda/Shrout."
+            }
         }
 
         message.author.send({ embed: embed })
