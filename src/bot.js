@@ -41,7 +41,7 @@ client.on('message', function (message) {
     if (isValidCommand(message, "support")) {
         let embed = {
             "title": "Welcome to the CSGORolls Support Bot",
-            "description": "Hello there, \n\nI am here to help you in case you're having some issues with using CSGORoll. \n\nDown below I will list the most common issues that may occur while using our services. If you're experiencing any issues please use the commands down below for a possible solution.\n\n\n\n*LIST OF COMMANDS*\n",
+            "description": "Hello there, \n\nI'm here to help you in case you're having issues with using CSGORoll. \nDown below I will list the most common issues that may occur while using our services. If you're experiencing any issues please use the commands down below for a possible solution.\n\n*LIST OF COMMANDS*\n",
             "url": "https://www.csgoroll.com/en/support",
             "color": 2172203,
             "timestamp": new Date(),
@@ -53,11 +53,11 @@ client.on('message', function (message) {
             "fields": [
                 {
                     "name": "!faq",
-                    "value": "First of all, I would like to remind you that we have a very descriptive FAQ page with most of the questions answered there. Make sure to check it out!"
+                    "value": "Make sure to read our FAQ if you still haven't!"
                 },
                 {
                     "name": "!steamlvl5",
-                    "value": "I am getting the 'You need to be at least level 5 in order to claim FREE BOX' error message."
+                    "value": "I'm getting the 'You need to be at least level 5 in order to claim FREE BOX' error message."
                 },
                 {
                     "name": "!trading",
@@ -77,7 +77,7 @@ client.on('message', function (message) {
                 },
                 {
                     "name": "!loadInventory",
-                    "value": "I am getting 'Can not load your inventory at the moment' error message."
+                    "value": "I'm getting 'Can not load your inventory at the moment' error message."
                 },
                 {
                     "name": "!withdrawreq",
@@ -94,6 +94,9 @@ client.on('message', function (message) {
                 {
                     "name": "!partnership",
                     "value": "I'm interested in creating content for you guys, where do I go?"
+                },
+                {
+                    "value": "The answer to your problem is not here? Contact us via https://www.csgoroll.com/en/support"
                 }
             ],
             "footer":{
