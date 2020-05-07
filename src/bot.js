@@ -7,18 +7,6 @@ client.login(process.env.BOT_TOKEN);
 
 //check if the message from the user is an actual command
 const isValidCommand = (message, cmdName) => message.content.toLowerCase().startsWith(PREFIX + cmdName)
-var support = 0;
-var faq= 0;
-var missingdeposit = 0;
-var loadinventory = 0;
-var withdrawreq = 0;
-var howtowithdraw = 0;
-var request = 0;
-var partnership = 0;
-var steamlvl5 = 0;
-var mindeposit = 0;
-var trading = 0;
-var affiliates = 0;
 
 //Is the bot connected
 client.on("ready", () => {
@@ -105,8 +93,7 @@ client.on('message', function (message) {
             }
         }
 
-        message.author.send({ embed: embed })
-        support++;
+        message.author.send({ embed: embed }).catch(()=> message.reply("Seems I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to Privacy Settings."))
     }
  /**
      * !steamlvl5 command
@@ -123,7 +110,6 @@ client.on('message', function (message) {
             }
         }
         message.author.send({ embed: embed })
-        steamlvl5++;
     }
 
      /**
@@ -142,7 +128,6 @@ client.on('message', function (message) {
         }
 
         message.author.send({embed: embed})
-        loadinventory++;
     }
 
      /**
@@ -161,7 +146,6 @@ client.on('message', function (message) {
         }
 
         message.author.send({embed: embed})
-        missingdeposit++;
     }
 
      /**
@@ -180,7 +164,6 @@ client.on('message', function (message) {
         }
 
         message.author.send({embed: embed})
-        howtowithdraw++;
     }
 
      /**
@@ -200,7 +183,6 @@ client.on('message', function (message) {
         }
 
         message.author.send({embed: embed})
-        partnership++;
     }
     /**
      * !faq command
@@ -217,7 +199,6 @@ client.on('message', function (message) {
         }
 
         message.author.send({embed: embed})
-        faq++;
     }
 
      /**
@@ -236,7 +217,6 @@ client.on('message', function (message) {
         }
 
         message.author.send({embed: embed})
-        request++;
     }
 
 
@@ -252,7 +232,6 @@ client.on('message', function (message) {
         }
 
         message.author.send({embed: embed})
-        affiliates++;
     }
 
      /**
@@ -270,7 +249,6 @@ client.on('message', function (message) {
             }
         }
         message.author.send({embed: embed})
-        withdrawreq++;
     }
 
     /**
@@ -287,7 +265,6 @@ client.on('message', function (message) {
             }
         }
         message.author.send({embed: embed})
-        mindeposit++;
     }
 
 
@@ -305,78 +282,5 @@ client.on('message', function (message) {
             }
         }
         message.author.send({embed: embed})
-        trading++;
     }
-
-     /**
-     * !rodacheck command
-     */
-
-    if (isValidCommand(message, "rodacheck")) {
-        let embed = {
-            "title": "Number of commands used so far",
-            "color": 2172203,
-            "timestamp": new Date(),
-            "thumbnail": {
-                "url": client.user.avatarURL()
-            },
-            "fields": [
-                {
-                    "name": "!support",
-                    "value": parseInt(support)
-                },
-                {
-                    "name": "!faq",
-                    "value": parseInt(faq)
-                },
-                {
-                    "name": "!steamlvl5",
-                    "value": parseInt(steamlvl5)
-                },
-                {
-                    "name": "!trading",
-                    "value": parseInt(trading)
-                },
-                {
-                    "name": "!affiliates",
-                    "value": parseInt(affiliates)
-                },
-                {
-                    "name": "!mindeposit",
-                    "value": parseInt(mindeposit)
-                },
-                {
-                    "name": "!missingdeposit",
-                    "value": parseInt(missingdeposit)
-                },
-                {
-                    "name": "!loadInventory",
-                    "value": parseInt(loadinventory)
-                },
-                {
-                    "name": "!withdrawreq",
-                    "value": parseInt(withdrawreq)
-                },
-                {
-                    "name": "!howToWithdraw",
-                    "value": parseInt(howtowithdraw)
-                },
-                {
-                    "name": "!request",
-                    "value": parseInt(request)
-                },
-                {
-                    "name": "!partnership",
-                    "value": parseInt(partnership)
-                }
-                ,
-                {
-                    "name": "TOTAL",
-                    "value": parseInt(partnership) + parseInt(request) + parseInt(howtowithdraw) + parseInt(withdrawreq) + parseInt(loadinventory) + parseInt(missingdeposit) + parseInt(mindeposit) + parseInt(affiliates) + parseInt(trading) + parseInt(steamlvl5) + parseInt(faq) + parseInt(support)
-                }
-            ]
-        }
-        message.author.send({embed: embed})
-    }
-
 })
