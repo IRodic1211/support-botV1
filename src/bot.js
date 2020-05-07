@@ -93,7 +93,7 @@ client.on('message', function (message) {
             }
         }
 
-        message.author.send({ embed: embed }).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author} tried to use the !support command but his DM's were closed.`)))
+        message.author.send({ embed: embed }).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.toString()} tried to use the !support command but his DM's were closed.`)))
     }
  /**
      * !steamlvl5 command
