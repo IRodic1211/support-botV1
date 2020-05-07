@@ -45,7 +45,7 @@ client.on('message', function (message) {
                 },
                 {
                     "name": "!steamlvl5",
-                    "value": "I'm getting the 'You need to be at least level 5 in order to claim FREE BOX' error message."
+                    "value": "'You need to be at least level 5 in order to claim FREE BOX' error message appeared."
                 },
                 {
                     "name": "!trading",
@@ -57,7 +57,7 @@ client.on('message', function (message) {
                 },
                 {
                     "name": "!mideposit",
-                    "value": "I'm wondering, what is the minimal deposit value on CSGORoll?"
+                    "value": "What is the minimal deposit value on CSGORoll?"
                 },
                 {
                     "name": "!missingdeposit",
@@ -65,7 +65,7 @@ client.on('message', function (message) {
                 },
                 {
                     "name": "!loadInventory",
-                    "value": "I'm getting 'Can not load your inventory at the moment' error message."
+                    "value": "'Can not load your inventory at the moment' error message appeared."
                 },
                 {
                     "name": "!withdrawreq",
@@ -77,7 +77,7 @@ client.on('message', function (message) {
                 },
                 {
                     "name": "!request",
-                    "value": "I wanted to withdraw a really cool skin, but then I got the pop-up saying that I need a higher allowance."
+                    "value": "What is the Withdraw Limit?"
                 },
                 {
                     "name": "!partnership",
@@ -93,7 +93,7 @@ client.on('message', function (message) {
             }
         }
 
-        message.author.send({ embed: embed }).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} tried to use the !support command but his DM's were closed.`)))
+        message.author.send({ embed: embed }).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !support command but his DM's were closed.`)))
     }
  /**
      * !steamlvl5 command
@@ -109,7 +109,7 @@ client.on('message', function (message) {
                 "url": client.user.avatarURL()
             }
         }
-        message.author.send({ embed: embed }).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} tried to use the !steamlvl5 command but his DM's were closed.`)))
+        message.author.send({ embed: embed }).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !steamlvl5 command but his DM's were closed.`)))
     }
 
      /**
@@ -127,7 +127,7 @@ client.on('message', function (message) {
             }
         }
 
-        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} tried to use the !loadinventory command but his DM's were closed.`)))
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !loadinventory command but his DM's were closed.`)))
     }
 
      /**
@@ -136,7 +136,7 @@ client.on('message', function (message) {
 
     if (isValidCommand(message, "missingdeposit")) {
         let embed = {
-            "title": "I have deposited but I still didn't get credited",
+            "title": "I deposited but I didn't receive any credits",
             "description": "Hey there​​, \n\nPlease create a support ticket at https://www.csgoroll.com/en/support or email us directly at support@csgoroll.com with the following information:\n\nScreenshots of the transaction (Can access from your Steam inventory -> Trade history)\n\nSteam profile of the user you traded with. - Right click the page and select 'Copy Page URL'.",
             "color": 2172203,
             "timestamp": new Date(),
@@ -145,7 +145,7 @@ client.on('message', function (message) {
             }
         }
 
-        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} tried to use the !missingdeposit command but his DM's were closed.`)))
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !missingdeposit command but his DM's were closed.`)))
     }
 
      /**
@@ -163,7 +163,7 @@ client.on('message', function (message) {
             }
         }
 
-        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} tried to use the !howtowithdraw command but his DM's were closed.`)))
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !howtowithdraw command but his DM's were closed.`)))
     }
 
      /**
@@ -182,7 +182,7 @@ client.on('message', function (message) {
             
         }
 
-        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} tried to use the !partnership command but his DM's were closed.`)))
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !partnership command but his DM's were closed.`)))
     }
     /**
      * !faq command
@@ -198,7 +198,7 @@ client.on('message', function (message) {
             }
         }
 
-        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} tried to use the !faq command but his DM's were closed.`)))
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !faq command but his DM's were closed.`)))
     }
 
      /**
@@ -216,7 +216,7 @@ client.on('message', function (message) {
             }
         }
 
-        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} tried to use the !request command but his DM's were closed.`)))
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !request command but his DM's were closed.`)))
     }
 
 
@@ -231,7 +231,7 @@ client.on('message', function (message) {
             }
         }
 
-        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} tried to use the !affiliates command but his DM's were closed.`)))
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !affiliates command but his DM's were closed.`)))
     }
 
      /**
@@ -248,7 +248,7 @@ client.on('message', function (message) {
                 "url": client.user.avatarURL()
             }
         }
-        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} tried to use the !withdrawreq command but his DM's were closed.`)))
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !withdrawreq command but his DM's were closed.`)))
     }
 
     /**
@@ -264,7 +264,7 @@ client.on('message', function (message) {
                 "url": client.user.avatarURL()
             }
         }
-        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} tried to use the !mindeposit command but his DM's were closed.`)))
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !mindeposit command but his DM's were closed.`)))
     }
 
 
@@ -281,6 +281,6 @@ client.on('message', function (message) {
                 "url": client.user.avatarURL()
             }
         }
-        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} tried to use the !trading command but his DM's were closed.`)))
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !trading command but his DM's were closed.`)))
     }
 })
