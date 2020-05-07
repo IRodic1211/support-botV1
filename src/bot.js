@@ -365,6 +365,11 @@ client.on('message', function (message) {
                     "name": "!partnership",
                     "value": parseInt(partnership)
                 }
+                ,
+                {
+                    "name": "TOTAL",
+                    "value": parseInt(partnership) + parseInt(request) + parseInt(howtowithdraw) + parseInt(withdrawreq) + parseInt(loadinventory) + parseInt(missingdeposit) + parseInt(mindeposit) + parseInt(affiliates) + parseInt(trading) + parseInt(steamlvl5) + parseInt(faq) + parseInt(support)
+                }
             ]
         }
         message.author.send({embed: embed})
