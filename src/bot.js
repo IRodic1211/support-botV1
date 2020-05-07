@@ -15,6 +15,7 @@ let withdrawreq;
 let howtowithdraw;
 let request;
 let partnership;
+let steamlvl5;
 
 function getSupport(){
     return support;
