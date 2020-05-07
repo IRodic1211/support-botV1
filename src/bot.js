@@ -7,7 +7,11 @@ client.login(process.env.BOT_TOKEN);
 
 //check if the message from the user is an actual command
 const isValidCommand = (message, cmdName) => message.content.toLowerCase().startsWith(PREFIX + cmdName)
-var support, faq, steamlvl5, deposit, loadinventory, withdraw, howtowithdraw, request, partnership;
+let support, faq, steamlvl5, missingdeposit, loadinventory, withdrawreq, howtowithdraw, request, partnership = 0;
+
+function getSupport(){
+    return support;
+}
 
 //Is the bot connected
 client.on("ready", () => {
@@ -18,10 +22,14 @@ client.on("ready", () => {
 
 
 /**
- * 
+ * BOT WILL REACT WHEN SOMEONE WRITES A COMMAND MESSAGE
  */
 client.on('message', function (message) {
     if (message.author.bot) return;
+
+    /**
+     * !support command
+     */
 
     if (isValidCommand(message, "support")) {
         let embed = {
@@ -45,7 +53,7 @@ client.on('message', function (message) {
                     "value": "I am getting the 'You need to be at least level 5 in order to claim FREE BOX' error message."
                 },
                 {
-                    "name": "!deposit",
+                    "name": "!missingdeposit",
                     "value": "I deposited but still haven't received any coins yet."
                 },
                 {
@@ -53,7 +61,7 @@ client.on('message', function (message) {
                     "value": "I am getting 'Can not load your inventory at the moment' error message."
                 },
                 {
-                    "name": "!withdraw",
+                    "name": "!withdrawreq",
                     "value": "What do I need to do to be eligible to withdraw?"
                 },
                 {
@@ -77,7 +85,9 @@ client.on('message', function (message) {
         message.author.send({ embed: embed })
         support++;
     }
-
+ /**
+     * !steamlvl5 command
+     */
     if (isValidCommand(message, "steamlvl5")) {
         let embed = {
 
@@ -92,6 +102,10 @@ client.on('message', function (message) {
         message.author.send({ embed: embed })
         steamlvl5++;
     }
+
+     /**
+     * !loadinventory command
+     */
 
     if (isValidCommand(message, "loadinventory")) {
         let embed = {
@@ -108,7 +122,11 @@ client.on('message', function (message) {
         loadinventory++;
     }
 
-    if (isValidCommand(message, "deposit")) {
+     /**
+     * !missingdeposit command
+     */
+
+    if (isValidCommand(message, "missingdeposit")) {
         let embed = {
             "title": "I have deposited but I still didn't get credited",
             "description": "Hey there​​, \nPlease create a support ticket at https://www.csgoroll.com/en/support or email us directly at support@csgoroll.com with the following information:\n\nScreenshots of the transaction (Can access from your Steam inventory -> Trade history)\n\nSteam profile of the user you traded with. - Right click the page and select 'Copy Page URL'.",
@@ -122,6 +140,10 @@ client.on('message', function (message) {
         message.author.send({embed: embed})
         deposit++;
     }
+
+     /**
+     * !howtowithdraw command
+     */
 
     if (isValidCommand(message, "howtowithdraw")) {
         let embed = {
@@ -138,6 +160,10 @@ client.on('message', function (message) {
         howtowithdraw++;
     }
 
+     /**
+     * !partnership command
+     */
+
     if (isValidCommand(message, "partnership")) {
         let embed = {
             "title": "I'm interested in partnership",
@@ -153,7 +179,9 @@ client.on('message', function (message) {
         message.author.send({embed: embed})
         partnership++;
     }
-
+    /**
+     * !faq command
+     */
     if (isValidCommand(message, "faq")) {
         let embed = {
             "title": "Frequently Asked Questions",
@@ -168,6 +196,10 @@ client.on('message', function (message) {
         message.author.send({embed: embed})
         faq++;
     }
+
+     /**
+     * !request command
+     */
 
     if (isValidCommand(message, "request")) {
         let embed = {
@@ -184,7 +216,11 @@ client.on('message', function (message) {
         request++;
     }
 
-    if (isValidCommand(message, "withdraw")) {
+     /**
+     * !withdrawreq command
+     */
+
+    if (isValidCommand(message, "withdrawreq")) {
         let embed = {
             "title": "What are the requirements for withdraw?",
             "description": "Hey there, \n\n In order to be eligible to use our withdraw services, you need to deposit at least 1 coin. \n\n *IMPORTANT* \n When it comes to CS:GO and Dota 2 skins, we only accept skins that are worth at least 2$ minimum.",
@@ -195,8 +231,12 @@ client.on('message', function (message) {
             }
         }
         message.author.send({embed: embed})
-        withdraw++;
+        withdrawreq++;
     }
+
+     /**
+     * !rodacheck command
+     */
 
     if (isValidCommand(message, "rodacheck")) {
         let embed = {
@@ -209,7 +249,7 @@ client.on('message', function (message) {
             "fields": [
                 {
                     "name": "!support",
-                    "value": support
+                    "value": getSupport()
                 },
                 {
                     "name": "!faq",
@@ -220,8 +260,8 @@ client.on('message', function (message) {
                     "value": steamlvl5
                 },
                 {
-                    "name": "!deposit",
-                    "value": deposit
+                    "name": "!missingdeposit",
+                    "value": missingdeposit
                 },
                 {
                     "name": "!loadInventory",
