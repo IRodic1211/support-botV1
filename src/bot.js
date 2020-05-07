@@ -174,7 +174,7 @@ client.on('message', function (message) {
         message.author.send({embed: embed})
     }
 
-    if (isValidCommand(message, "withdrawReq")) {
+    if (isValidCommand(message, "withdraw")) {
         let embed = {
             "title": "Frequently Asked Questions",
             "description": "Hey there, \n\n In order to be eligible to use our withdraw services, you need to deposit at least 1 coin. \n *IMPORTANT* \n When it comes to CS:GO and Dota2 skins, we only accept skins that are worth at least 2$ each.",
@@ -184,6 +184,7 @@ client.on('message', function (message) {
                 "url": client.user.avatarURL()
             }
         }
+        console.log('hehe')
         message.author.send({embed: embed})
     }
 
