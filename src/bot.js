@@ -41,7 +41,7 @@ client.on('message', function (message) {
     if (isValidCommand(message, "support")) {
         let embed = {
             "title": "Welcome to the CSGORolls Support Bot",
-            "description": "Hello there, \n\nI'm here to help you in case you're having issues with using CSGORoll. \nDown below I will list the most common issues that may occur while using our services. If you're experiencing any issues please use the commands down below for a possible solution.\n\n*LIST OF COMMANDS*\n",
+            "description": "\n*LIST OF COMMANDS*\n",
             "url": "https://www.csgoroll.com/en/support",
             "color": 2172203,
             "timestamp": new Date(),
@@ -95,7 +95,8 @@ client.on('message', function (message) {
                     "name": "!partnership",
                     "value": "I'm interested in creating content for you guys, where do I go?"
                 },
-                {
+                {   
+                    "name": ":question:",
                     "value": "The answer to your problem is not here? Contact us via https://www.csgoroll.com/en/support"
                 }
             ],
