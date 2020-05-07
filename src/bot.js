@@ -7,7 +7,14 @@ client.login(process.env.BOT_TOKEN);
 
 //check if the message from the user is an actual command
 const isValidCommand = (message, cmdName) => message.content.toLowerCase().startsWith(PREFIX + cmdName)
-let support, faq, steamlvl5, missingdeposit, loadinventory, withdrawreq, howtowithdraw, request, partnership = 0;
+let support;
+let faq;
+let missingdeposit;
+let loadinventory;
+let withdrawreq;
+let howtowithdraw;
+let request;
+let partnership;
 
 function getSupport(){
     return support;
