@@ -7,6 +7,7 @@ client.login(process.env.BOT_TOKEN);
 
 //check if the message from the user is an actual command
 const isValidCommand = (message, cmdName) => message.content.toLowerCase().startsWith(PREFIX + cmdName)
+var support, faq, steamlvl5, deposit, loadinventory, withdraw, howtowithdraw, request, partnership;
 
 //Is the bot connected
 client.on("ready", () => {
@@ -74,6 +75,7 @@ client.on('message', function (message) {
         }
 
         message.author.send({ embed: embed })
+        support++;
     }
 
     if (isValidCommand(message, "steamlvl5")) {
@@ -88,6 +90,7 @@ client.on('message', function (message) {
             }
         }
         message.author.send({ embed: embed })
+        steamlvl5++;
     }
 
     if (isValidCommand(message, "loadinventory")) {
@@ -102,6 +105,7 @@ client.on('message', function (message) {
         }
 
         message.author.send({embed: embed})
+        loadinventory++;
     }
 
     if (isValidCommand(message, "deposit")) {
@@ -116,6 +120,7 @@ client.on('message', function (message) {
         }
 
         message.author.send({embed: embed})
+        deposit++;
     }
 
     if (isValidCommand(message, "howtowithdraw")) {
@@ -130,6 +135,7 @@ client.on('message', function (message) {
         }
 
         message.author.send({embed: embed})
+        howtowithdraw++;
     }
 
     if (isValidCommand(message, "partnership")) {
@@ -140,10 +146,12 @@ client.on('message', function (message) {
             "timestamp": new Date(),
             "thumbnail": {
                 "url": client.user.avatarURL()
-            }
+            },
+            
         }
 
         message.author.send({embed: embed})
+        partnership++;
     }
 
     if (isValidCommand(message, "faq")) {
@@ -158,6 +166,7 @@ client.on('message', function (message) {
         }
 
         message.author.send({embed: embed})
+        faq++;
     }
 
     if (isValidCommand(message, "request")) {
@@ -172,6 +181,7 @@ client.on('message', function (message) {
         }
 
         message.author.send({embed: embed})
+        request++;
     }
 
     if (isValidCommand(message, "withdraw")) {
@@ -183,6 +193,57 @@ client.on('message', function (message) {
             "thumbnail": {
                 "url": client.user.avatarURL()
             }
+        }
+        message.author.send({embed: embed})
+        withdraw++;
+    }
+
+    if (isValidCommand(message, "rodacheck")) {
+        let embed = {
+            "title": "Number of commands used so far",
+            "color": 2172203,
+            "timestamp": new Date(),
+            "thumbnail": {
+                "url": client.user.avatarURL()
+            },
+            "fields": [
+                {
+                    "name": "!support",
+                    "value": support
+                },
+                {
+                    "name": "!faq",
+                    "value": faq
+                },
+                {
+                    "name": "!steamlvl5",
+                    "value": steamlvl5
+                },
+                {
+                    "name": "!deposit",
+                    "value": deposit
+                },
+                {
+                    "name": "!loadInventory",
+                    "value": loadinventory
+                },
+                {
+                    "name": "!withdraw",
+                    "value": withdraw
+                },
+                {
+                    "name": "!howToWithdraw",
+                    "value": howtowithdraw
+                },
+                {
+                    "name": "!request",
+                    "value": request
+                },
+                {
+                    "name": "!partnership",
+                    "value": partnership
+                }
+            ]
         }
         message.author.send({embed: embed})
     }
