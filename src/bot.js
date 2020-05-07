@@ -52,7 +52,7 @@ client.on('message', function (message) {
                     "value": "I am getting 'Can not load your inventory at the moment' error message."
                 },
                 {
-                    "name": "!withdrawReq",
+                    "name": "!withdraw",
                     "value": "What do I need to do to be eligible to withdraw?"
                 },
                 {
@@ -184,7 +184,6 @@ client.on('message', function (message) {
                 "url": client.user.avatarURL()
             }
         }
-        console.log('hehe')
         message.author.send({embed: embed})
     }
 
