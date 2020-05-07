@@ -268,8 +268,8 @@ client.on('message', function (message) {
                     "value": loadinventory
                 },
                 {
-                    "name": "!withdraw",
-                    "value": withdraw
+                    "name": "!withdrawreq",
+                    "value": withdrawreq
                 },
                 {
                     "name": "!howToWithdraw",
