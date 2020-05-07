@@ -138,7 +138,7 @@ client.on('message', function (message) {
         }
 
         message.author.send({embed: embed})
-        deposit++;
+        missingdeposit++;
     }
 
      /**
