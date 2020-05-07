@@ -28,7 +28,7 @@ client.on('message', function (message) {
 
     if (isValidCommand(message, "support")) {
         let embed = {
-            "title": "Welcome to the CSGORolls Support Bot",
+            "title": "Welcome to the CSGORoll assistant",
             "description": "\n*LIST OF COMMANDS*\n",
             "url": "https://www.csgoroll.com/en/support",
             "color": 2172203,
