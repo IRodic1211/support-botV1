@@ -53,7 +53,7 @@ client.on('message', function (message) {
                 },
                 {
                     "name": "!affiliates",
-                    "value": "How affiliate systen works?"
+                    "value": "How affiliate system works?"
                 },
                 {
                     "name": "!mideposit",
