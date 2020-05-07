@@ -257,39 +257,39 @@ client.on('message', function (message) {
             "fields": [
                 {
                     "name": "!support",
-                    "value": getSupport()
+                    "value": parseInt(support)
                 },
                 {
                     "name": "!faq",
-                    "value": faq
+                    "value": parseInt(faq)
                 },
                 {
                     "name": "!steamlvl5",
-                    "value": steamlvl5
+                    "value": parseInt(steamlvl5)
                 },
                 {
                     "name": "!missingdeposit",
-                    "value": missingdeposit
+                    "value": parseInt(missingdeposit)
                 },
                 {
                     "name": "!loadInventory",
-                    "value": loadinventory
+                    "value": parseInt(loadinventory)
                 },
                 {
                     "name": "!withdrawreq",
-                    "value": withdrawreq
+                    "value": parseInt(withdrawreq)
                 },
                 {
                     "name": "!howToWithdraw",
-                    "value": howtowithdraw
+                    "value": parseInt(howtowithdraw)
                 },
                 {
                     "name": "!request",
-                    "value": request
+                    "value": parseInt(request)
                 },
                 {
                     "name": "!partnership",
-                    "value": partnership
+                    "value": parseInt(partnership)
                 }
             ]
         }
