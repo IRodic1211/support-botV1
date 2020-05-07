@@ -25,7 +25,7 @@ client.on('message', function (message) {
     if (isValidCommand(message, "support")) {
         let embed = {
             "title": "Welcome to the CSGORolls Support Bot",
-            "description": "Hello there, \nI am here to help you in case you're having some issues with using CSGORoll. Down below I will list the most common issues that may occur while using our services. If you're experiencing an issue that is listed below, please use the command stated above the issue for the possible solution.",
+            "description": "Hello there, \nI am here to help you in case you're having some issues with using CSGORoll. Down below I will list the most common issues that may occur while using our services. If you're experiencing any issues please use the commands down below for a possible solution.",
             "url": "https://www.csgoroll.com/en/support",
             "color": 2172203,
             "timestamp": new Date(),
@@ -120,7 +120,7 @@ client.on('message', function (message) {
 
     if (isValidCommand(message, "howtowithdraw")) {
         let embed = {
-            "title": "I have deposited but I still didn't get credited",
+            "title": "There is no 'Collect item' option under the skin",
             "description": "Hey there, \n\nItems that don't have a withdraw button aren't being stocked by us.\nYou can only withdraw them if someone were to deposit that exact skin to one of our traders.\n\n\nItem that -can- be withdrawn will always have a timer or 'Instant' tag on it.\nWhen these timers run out you can click 'Collect Item' and send a trade for the correct item which will then be automatically accepted.",
             "color": 2172203,
             "timestamp": new Date(),
@@ -162,8 +162,8 @@ client.on('message', function (message) {
 
     if (isValidCommand(message, "request")) {
         let embed = {
-            "title": "Frequently Asked Questions",
-            "description": "Hey there, \n\n CSGORoll currently applies a daily limit of 200 coins over your deposit value to be able to withdraw. This is just a temporary precaution whilst in Beta.\nYou can simply request an increase by withdrawing one of your items that are over this limit. A pop-up will appear where you must type the extra value you'd like to request and our staff will manually approve it!\n *IMPORTANT* \n Make sure to type a rounded number so it doesn't glitch, this request can take a few hours to be reviewed and we are not able to speed up the process here.",
+            "title": "What is the Withdraw Limit and Withdraw Request?",
+            "description": "Hey there, \n\n CSGORoll currently applies a daily limit of 200 coins over your deposit value to be able to withdraw. This is just a temporary precaution whilst in Beta.\n\nYou can simply request an increase by withdrawing one of your items that are over this limit. A pop-up will appear where you must type the extra value you'd like to request and our staff will manually approve it!\n\n *IMPORTANT* \n Make sure to type a rounded number so it doesn't glitch, this request can take a few hours to be reviewed and we are not able to speed up the process here.",
             "color": 2172203,
             "timestamp": new Date(),
             "thumbnail": {
@@ -176,8 +176,8 @@ client.on('message', function (message) {
 
     if (isValidCommand(message, "withdraw")) {
         let embed = {
-            "title": "Frequently Asked Questions",
-            "description": "Hey there, \n\n In order to be eligible to use our withdraw services, you need to deposit at least 1 coin. \n *IMPORTANT* \n When it comes to CS:GO and Dota2 skins, we only accept skins that are worth at least 2$ each.",
+            "title": "What are the requirements for withdraw?",
+            "description": "Hey there, \n\n In order to be eligible to use our withdraw services, you need to deposit at least 1 coin. \n\n *IMPORTANT* \n When it comes to CS:GO and Dota 2 skins, we only accept skins that are worth at least 2$ minimum.",
             "color": 2172203,
             "timestamp": new Date(),
             "thumbnail": {
