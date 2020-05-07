@@ -18,6 +18,7 @@ var partnership = 0;
 var steamlvl5 = 0;
 var mindeposit = 0;
 var trading = 0;
+var affiliates = 0;
 
 //Is the bot connected
 client.on("ready", () => {
@@ -65,6 +66,10 @@ client.on('message', function (message) {
                 {
                     "name": "!mideposit",
                     "value": "I'm wondering, what is the minimal deposit value on CSGORoll?"
+                },
+                {
+                    "name": "!affiliates",
+                    "value": "How affiliate systen works?"
                 },
                 {
                     "name": "!missingdeposit",
@@ -124,7 +129,7 @@ client.on('message', function (message) {
     if (isValidCommand(message, "loadinventory")) {
         let embed = {
             "title": "The website can not load my inventory. What to do?",
-            "description": "Hey there, \nThis issue usually happens when steam is having connection issues, making the inventory take a bit longer than usual to load. \n\nKeep refreshing your page and it should work at some point or try again later when inventories are no longer critical https://steamstat.us/.",
+            "description": "Hey there, \n\nThis issue usually happens when steam is having connection issues, making the inventory take a bit longer than usual to load. \n\nKeep refreshing your page and it should work at some point or try again later when inventories are no longer critical https://steamstat.us/.",
             "color": 2172203,
             "timestamp": new Date(),
             "thumbnail": {
@@ -143,7 +148,7 @@ client.on('message', function (message) {
     if (isValidCommand(message, "missingdeposit")) {
         let embed = {
             "title": "I have deposited but I still didn't get credited",
-            "description": "Hey there​​, \nPlease create a support ticket at https://www.csgoroll.com/en/support or email us directly at support@csgoroll.com with the following information:\n\nScreenshots of the transaction (Can access from your Steam inventory -> Trade history)\n\nSteam profile of the user you traded with. - Right click the page and select 'Copy Page URL'.",
+            "description": "Hey there​​, \n\nPlease create a support ticket at https://www.csgoroll.com/en/support or email us directly at support@csgoroll.com with the following information:\n\nScreenshots of the transaction (Can access from your Steam inventory -> Trade history)\n\nSteam profile of the user you traded with. - Right click the page and select 'Copy Page URL'.",
             "color": 2172203,
             "timestamp": new Date(),
             "thumbnail": {
@@ -230,6 +235,22 @@ client.on('message', function (message) {
         request++;
     }
 
+
+    if (isValidCommand(message, "affiliates")) {
+        let embed = {
+            "title": "How affiliate system works>",
+            "description": "Hey there, \n\n It’s the same system for almost all websites but most of the users still don’t understand the concept of house-edge and where the cut comes from. \n\n So the affiliate works like this: I invited you through my code, correct? You need to deposit at least 1 coin and start wagering to generate income under my code. Every time you place a bet on CSGORoll, we take a percentage of it and this is called house-edge. I'll be receiving the percentage of my affiliate code as cut from this value that CSGORoll is taking. We offer up to 50% in affiliates cut which is half of what we received and the highest value offered in the scene currently. \n\nThis value is credited instantly to your account and can be verified under Transactions with the name ‘Commissions’, sometimes it will show 0.00 because we don’t show all decimals, so it could be 0.00002 received. ",
+            "color": 2172203,
+            "timestamp": new Date(),
+            "thumbnail": {
+                "url": client.user.avatarURL()
+            }
+        }
+
+        message.author.send({embed: embed})
+        affiliates++;
+    }
+
      /**
      * !withdrawreq command
      */
@@ -254,7 +275,7 @@ client.on('message', function (message) {
     if (isValidCommand(message, "mindeposit")) {
         let embed = {
             "title": "What is the minimum deposit value.",
-            "description": "Hey there,\n *CSGO AND DOTA 2 ITEMS* \nMinimum deposit value for CS:GO and Dota 2 skins is at least 2coins minimum per skin. \n\n*CRYPTO*\n Minimum deposit value for crypto currencies is 1 coin. \n\n*CREDIT CARDS*\n\ Minumum deposit value for credit cards is 5 coins.",
+            "description": "Hey there,\n\n *CSGO AND DOTA 2 ITEMS* \nMinimum deposit value for CS:GO and Dota 2 skins is at least 2coins minimum per skin. \n\n*CRYPTO*\n Minimum deposit value for crypto currencies is 1 coin. \n\n*CREDIT CARDS*\n\ Minumum deposit value for credit cards is 5 coins.",
             "color": 2172203,
             "timestamp": new Date(),
             "thumbnail": {
@@ -272,7 +293,7 @@ client.on('message', function (message) {
     if (isValidCommand(message, "trading")) {
         let embed = {
             "title": "Can I use CSGORoll as a trading platform?",
-            "description": "Hey there,\n Yes,Trading on the website is totally fine.Trade abusing is not (i.e being fraudulent by depositing wrongly priced skins, and withdrawing correct ones, if you see prices that are wrong, please inform us)",
+            "description": "Hey there,\n\n Yes,Trading on the website is totally fine.Trade abusing is not (i.e being fraudulent by depositing wrongly priced skins, and withdrawing correct ones, if you see prices that are wrong, please inform us)",
             "color": 2172203,
             "timestamp": new Date(),
             "thumbnail": {
