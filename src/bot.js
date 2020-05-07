@@ -93,7 +93,7 @@ client.on('message', function (message) {
             }
         }
 
-        message.author.send({ embed: embed }).catch(()=> message.reply("Seems I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to Privacy Settings."))
+        message.author.send({ embed: embed }).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings."))
     }
  /**
      * !steamlvl5 command
@@ -109,7 +109,7 @@ client.on('message', function (message) {
                 "url": client.user.avatarURL()
             }
         }
-        message.author.send({ embed: embed })
+        message.author.send({ embed: embed }).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings."))
     }
 
      /**
@@ -127,7 +127,7 @@ client.on('message', function (message) {
             }
         }
 
-        message.author.send({embed: embed})
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings."))
     }
 
      /**
@@ -145,7 +145,7 @@ client.on('message', function (message) {
             }
         }
 
-        message.author.send({embed: embed})
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings."))
     }
 
      /**
@@ -163,7 +163,7 @@ client.on('message', function (message) {
             }
         }
 
-        message.author.send({embed: embed})
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings."))
     }
 
      /**
@@ -182,7 +182,7 @@ client.on('message', function (message) {
             
         }
 
-        message.author.send({embed: embed})
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings."))
     }
     /**
      * !faq command
@@ -198,7 +198,7 @@ client.on('message', function (message) {
             }
         }
 
-        message.author.send({embed: embed})
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings."))
     }
 
      /**
@@ -216,7 +216,7 @@ client.on('message', function (message) {
             }
         }
 
-        message.author.send({embed: embed})
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings."))
     }
 
 
@@ -231,7 +231,7 @@ client.on('message', function (message) {
             }
         }
 
-        message.author.send({embed: embed})
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings."))
     }
 
      /**
@@ -248,7 +248,7 @@ client.on('message', function (message) {
                 "url": client.user.avatarURL()
             }
         }
-        message.author.send({embed: embed})
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings."))
     }
 
     /**
@@ -264,7 +264,7 @@ client.on('message', function (message) {
                 "url": client.user.avatarURL()
             }
         }
-        message.author.send({embed: embed})
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings."))
     }
 
 
@@ -281,6 +281,6 @@ client.on('message', function (message) {
                 "url": client.user.avatarURL()
             }
         }
-        message.author.send({embed: embed})
+        message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings."))
     }
 })
