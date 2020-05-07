@@ -52,7 +52,7 @@ client.on('message', function (message) {
                     "value": "I am getting 'Can not load your inventory at the moment' error message."
                 },
                 {
-                    "name": "!withdrawRequirement",
+                    "name": "!withdrawReq",
                     "value": "What do I need to do to be eligible to withdraw?"
                 },
                 {
@@ -60,7 +60,7 @@ client.on('message', function (message) {
                     "value": "There is no option to withdraw the skin that is in my CSGORoll inventory."
                 },
                 {
-                    "name": "!withdrawRequest",
+                    "name": "!request",
                     "value": "I wanted to withdraw a really cool skin, but then I got the pop-up saying that I need a higher allowance."
                 },
                 {
@@ -79,8 +79,8 @@ client.on('message', function (message) {
     if (isValidCommand(message, "steamlvl5")) {
         let embed = {
 
-            "title": "You need to be at least level 5 on steam in order to be able to claim FREE BOX error",
-            "description": "Hey there, \n\nPlease change your profile information to public:\n\nNavigate yourself to your steam profile;\nPress the 'Edit profile' menu;\nSelect 'My Privacy Settings';\nSet all information to public.\n\nOn CSGORoll:\n\nGo to your Profile summary;\nUpdate the Steam Trade URL;\nEnjoy!\n\n *IMPORTANT* \nYour profile can take 60 minutes to be updated and make sure you have at least 1 valid item in your CS:GO inventory that can be sold on steam market.",
+            "title": "You need to be at least level 5 on steam in order to be able to claim FREE BOX",
+            "description": "Hey there, \n\nPlease change your profile information to public:\n\nNavigate yourself to your steam profile;\nPress the 'Edit profile' menu;\nSelect 'My Privacy Settings';\nSet all information to public.\n\nOn CSGORoll:\n\nGo to your Profile summary;\nUpdate the Steam Trade URL;\nEnjoy!\n\n *IMPORTANT* \nYour profile can take 60 minutes to be updated and make sure you have at least 1 valid item in your CS:GO inventory that can be sold on the steam market.",
             "color": 2172203,
             "timestamp":new Date(),
             "thumbnail": {
@@ -160,7 +160,7 @@ client.on('message', function (message) {
         message.author.send({embed: embed})
     }
 
-    if (isValidCommand(message, "withdrawRequest")) {
+    if (isValidCommand(message, "request")) {
         let embed = {
             "title": "Frequently Asked Questions",
             "description": "Hey there, \n\n CSGORoll currently applies a daily limit of 200 coins over your deposit value to be able to withdraw. This is just a temporary precaution whilst in Beta.\nYou can simply request an increase by withdrawing one of your items that are over this limit. A pop-up will appear where you must type the extra value you'd like to request and our staff will manually approve it!\n *IMPORTANT* \n Make sure to type a rounded number so it doesn't glitch, this request can take a few hours to be reviewed and we are not able to speed up the process here.",
@@ -174,7 +174,7 @@ client.on('message', function (message) {
         message.author.send({embed: embed})
     }
 
-    if (isValidCommand(message, "withdrawRequirement")) {
+    if (isValidCommand(message, "withdrawReq")) {
         let embed = {
             "title": "Frequently Asked Questions",
             "description": "Hey there, \n\n In order to be eligible to use our withdraw services, you need to deposit at least 1 coin. \n *IMPORTANT* \n When it comes to CS:GO and Dota2 skins, we only accept skins that are worth at least 2$ each.",
@@ -184,7 +184,6 @@ client.on('message', function (message) {
                 "url": client.user.avatarURL()
             }
         }
-
         message.author.send({embed: embed})
     }
 
