@@ -64,12 +64,12 @@ client.on('message', function (message) {
                     "value": "Can I use CSGORoll as a trading platform?"
                 },
                 {
-                    "name": "!mideposit",
-                    "value": "I'm wondering, what is the minimal deposit value on CSGORoll?"
-                },
-                {
                     "name": "!affiliates",
                     "value": "How affiliate systen works?"
+                },
+                {
+                    "name": "!mideposit",
+                    "value": "I'm wondering, what is the minimal deposit value on CSGORoll?"
                 },
                 {
                     "name": "!missingdeposit",
@@ -238,7 +238,7 @@ client.on('message', function (message) {
 
     if (isValidCommand(message, "affiliates")) {
         let embed = {
-            "title": "How affiliate system works>",
+            "title": "How affiliate system works?",
             "description": "Hey there, \n\n It’s the same system for almost all websites but most of the users still don’t understand the concept of house-edge and where the cut comes from. \n\n So the affiliate works like this: I invited you through my code, correct? You need to deposit at least 1 coin and start wagering to generate income under my code. Every time you place a bet on CSGORoll, we take a percentage of it and this is called house-edge. I'll be receiving the percentage of my affiliate code as cut from this value that CSGORoll is taking. We offer up to 50% in affiliates cut which is half of what we received and the highest value offered in the scene currently. \n\nThis value is credited instantly to your account and can be verified under Transactions with the name ‘Commissions’, sometimes it will show 0.00 because we don’t show all decimals, so it could be 0.00002 received. ",
             "color": 2172203,
             "timestamp": new Date(),
