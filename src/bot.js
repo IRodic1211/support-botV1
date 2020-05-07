@@ -7,19 +7,17 @@ client.login(process.env.BOT_TOKEN);
 
 //check if the message from the user is an actual command
 const isValidCommand = (message, cmdName) => message.content.toLowerCase().startsWith(PREFIX + cmdName)
-let support;
-let faq;
-let missingdeposit;
-let loadinventory;
-let withdrawreq;
-let howtowithdraw;
-let request;
-let partnership;
-let steamlvl5;
-
-function getSupport(){
-    return support;
-}
+var support = 0;
+var faq= 0;
+var missingdeposit = 0;
+var loadinventory = 0;
+var withdrawreq = 0;
+var howtowithdraw = 0;
+var request = 0;
+var partnership = 0;
+var steamlvl5 = 0;
+var mindeposit = 0;
+var trading = 0;
 
 //Is the bot connected
 client.on("ready", () => {
@@ -59,6 +57,14 @@ client.on('message', function (message) {
                 {
                     "name": "!steamlvl5",
                     "value": "I am getting the 'You need to be at least level 5 in order to claim FREE BOX' error message."
+                },
+                {
+                    "name": "!trading",
+                    "value": "Can I use CSGORoll as a trading platform?"
+                },
+                {
+                    "name": "!mideposit",
+                    "value": "I'm wondering, what is the minimal deposit value on CSGORoll?"
                 },
                 {
                     "name": "!missingdeposit",
@@ -231,7 +237,7 @@ client.on('message', function (message) {
     if (isValidCommand(message, "withdrawreq")) {
         let embed = {
             "title": "What are the requirements for withdraw?",
-            "description": "Hey there, \n\n In order to be eligible to use our withdraw services, you need to deposit at least 1 coin. \n\n *IMPORTANT* \n When it comes to CS:GO and Dota 2 skins, we only accept skins that are worth at least 2$ minimum.",
+            "description": "Hey there, \n\n In order to be eligible to use our withdraw services, you need to deposit at least 1 coin.",
             "color": 2172203,
             "timestamp": new Date(),
             "thumbnail": {
@@ -240,6 +246,41 @@ client.on('message', function (message) {
         }
         message.author.send({embed: embed})
         withdrawreq++;
+    }
+
+    /**
+     * !mindeposit command
+     */
+    if (isValidCommand(message, "mindeposit")) {
+        let embed = {
+            "title": "What is the minimum deposit value.",
+            "description": "Hey there,\n *CSGO AND DOTA 2 ITEMS* \nMinimum deposit value for CS:GO and Dota 2 skins is at least 2coins minimum per skin. \n\n*CRYPTO*\n Minimum deposit value for crypto currencies is 1 coin. \n\n*CREDIT CARDS*\n\ Minumum deposit value for credit cards is 5 coins.",
+            "color": 2172203,
+            "timestamp": new Date(),
+            "thumbnail": {
+                "url": client.user.avatarURL()
+            }
+        }
+        message.author.send({embed: embed})
+        mindeposit++;
+    }
+
+
+    /**
+     * !trading command
+     */
+    if (isValidCommand(message, "trading")) {
+        let embed = {
+            "title": "Can I use CSGORoll as a trading platform?",
+            "description": "Hey there,\n Yes,Trading on the website is totally fine.Trade abusing is not (i.e being fraudulent by depositing wrongly priced skins, and withdrawing correct ones, if you see prices that are wrong, please inform us)",
+            "color": 2172203,
+            "timestamp": new Date(),
+            "thumbnail": {
+                "url": client.user.avatarURL()
+            }
+        }
+        message.author.send({embed: embed})
+        trading++;
     }
 
      /**
@@ -266,6 +307,14 @@ client.on('message', function (message) {
                 {
                     "name": "!steamlvl5",
                     "value": parseInt(steamlvl5)
+                },
+                {
+                    "name": "!trading",
+                    "value": parseInt(trading)
+                },
+                {
+                    "name": "!mindeposit",
+                    "value": parseInt(mindeposit)
                 },
                 {
                     "name": "!missingdeposit",
