@@ -56,7 +56,7 @@ client.on('message', function (message) {
                     "value": "How affiliate system works?"
                 },
                 {
-                    "name": "!mideposit",
+                    "name": "!mindeposit",
                     "value": "What is the minimal deposit value on CSGORoll?"
                 },
                 {
@@ -64,7 +64,7 @@ client.on('message', function (message) {
                     "value": "I deposited but still haven't received any coins yet."
                 },
                 {
-                    "name": "!loadInventory",
+                    "name": "!loadinventory",
                     "value": "'Can not load your inventory at the moment' error message appeared."
                 },
                 {
@@ -72,7 +72,7 @@ client.on('message', function (message) {
                     "value": "What do I need to do to be eligible to withdraw?"
                 },
                 {
-                    "name": "!howToWithdraw",
+                    "name": "!howtowithdraw",
                     "value": "There is no option to withdraw the skin that is in my CSGORoll inventory."
                 },
                 {
