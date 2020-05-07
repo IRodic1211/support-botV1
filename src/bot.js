@@ -334,6 +334,10 @@ client.on('message', function (message) {
                     "value": parseInt(trading)
                 },
                 {
+                    "name": "!affiliates",
+                    "value": parseInt(affiliates)
+                },
+                {
                     "name": "!mindeposit",
                     "value": parseInt(mindeposit)
                 },
