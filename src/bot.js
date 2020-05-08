@@ -92,7 +92,7 @@ client.on('message', function (message) {
                 "text": "For any constructive feedback please add me on discord Roda#2250 or DM Roda/Shrout."
             }
         }
-
+        console.log(`${message.author.tag} (${message.author.username}) used the !support command SUCCESSFULY`)
         message.author.send({ embed: embed }).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !support command but his DM's were closed.`)))
     }
  /**
@@ -106,6 +106,7 @@ client.on('message', function (message) {
             "color": 2172203,
             "timestamp":new Date()
         }
+        console.log(`${message.author.tag} (${message.author.username}) used the !steamlvl5 command SUCCESSFULY`)
         message.author.send({ embed: embed }).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !steamlvl5 command but his DM's were closed.`)))
     }
 
@@ -120,7 +121,7 @@ client.on('message', function (message) {
             "color": 2172203,
             "timestamp": new Date()
         }
-
+        console.log(`${message.author.tag} (${message.author.username}) used the !loadinventory command SUCCESSFULY`)
         message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !loadinventory command but his DM's were closed.`)))
     }
 
@@ -135,7 +136,7 @@ client.on('message', function (message) {
             "color": 2172203,
             "timestamp": new Date()
         }
-
+        console.log(`${message.author.tag} (${message.author.username}) used the !missingdeposit command SUCCESSFULY`)
         message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !missingdeposit command but his DM's were closed.`)))
     }
 
@@ -150,7 +151,7 @@ client.on('message', function (message) {
             "color": 2172203,
             "timestamp": new Date()
         }
-
+        console.log(`${message.author.tag} (${message.author.username}) used the !howtowithdraw command SUCCESSFULY`)
         message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !howtowithdraw command but his DM's were closed.`)))
     }
 
@@ -166,7 +167,7 @@ client.on('message', function (message) {
             "timestamp": new Date()
             
         }
-
+        console.log(`${message.author.tag} (${message.author.username}) used the !partnership command SUCCESSFULY`)
         message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !partnership command but his DM's were closed.`)))
     }
     /**
@@ -179,7 +180,7 @@ client.on('message', function (message) {
             "color": 2172203,
             "timestamp": new Date()
         }
-
+        console.log(`${message.author.tag} (${message.author.username}) used the !faq command SUCCESSFULY`)
         message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !faq command but his DM's were closed.`)))
     }
 
@@ -194,7 +195,7 @@ client.on('message', function (message) {
             "color": 2172203,
             "timestamp": new Date()
         }
-
+        console.log(`${message.author.tag} (${message.author.username}) used the !request command SUCCESSFULY`)
         message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !request command but his DM's were closed.`)))
     }
 
@@ -206,7 +207,7 @@ client.on('message', function (message) {
             "color": 2172203,
             "timestamp": new Date()
         }
-
+        console.log(`${message.author.tag} (${message.author.username}) used the !affiliates command SUCCESSFULY`)
         message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !affiliates command but his DM's were closed.`)))
     }
 
@@ -221,6 +222,7 @@ client.on('message', function (message) {
             "color": 2172203,
             "timestamp": new Date()
         }
+        console.log(`${message.author.tag} (${message.author.username}) used the !withdrawreq command SUCCESSFULY`)
         message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !withdrawreq command but his DM's were closed.`)))
     }
 
@@ -234,6 +236,7 @@ client.on('message', function (message) {
             "color": 2172203,
             "timestamp": new Date()
         }
+        console.log(`${message.author.tag} (${message.author.username}) used the !mindeposit command SUCCESSFULY`)
         message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !mindeposit command but his DM's were closed.`)))
     }
 
@@ -248,6 +251,7 @@ client.on('message', function (message) {
             "color": 2172203,
             "timestamp": new Date()
         }
+        console.log(`${message.author.tag} (${message.author.username}) used the !trading command SUCCESSFULY`)
         message.author.send({embed: embed}).catch(()=> message.reply("Seems like I can't DM you. Please turn on the 'Allow direct messages from server members' option by going to the Privacy Settings.", console.log(`${message.author.tag} (${message.author.username}) tried to use the !trading command but his DM's were closed.`)))
     }
 })
